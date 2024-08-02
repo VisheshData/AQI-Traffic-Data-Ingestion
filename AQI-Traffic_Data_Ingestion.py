@@ -88,15 +88,15 @@ def your_script():
     # Main script
     if __name__ == "__main__":
         # Read secret token from file
-        token = "f2b37c532037c9afb8bd3bf0caadbddca1a75741"
-        latlngbox = "28.402,76.838,28.883,77.348"
+        token = "YOUR AQICN TOKEN"
+        latlngbox = "28.402,76.838,28.883,77.348" #LATLAN Box ie. Latitude and Longitude of Top left and bottom right corner which can cover the city area
 
         # Fetch AQI data
         r = fetch_aqi_data(token, latlngbox)
         df = make_dataframe(r)
 
         # Fetch traffic data
-        TOMTOM_API_KEY = 'GgQ1W4Fwe9AruIX6rwtM7vJdHqeFo3pa'
+        TOMTOM_API_KEY = 'Your TOMTOM Key'
         RADIUS = 2000
         traffic_df = fetch_traffic_data(df, TOMTOM_API_KEY, RADIUS)
 
