@@ -124,6 +124,8 @@ def run_script_with_delay(script_function, delay, repetitions):
 
 # Example usage
 delay_in_seconds = 3600  # Delay between repetitions in seconds
-number_of_repetitions = 24  # Number of times to repeat the script
+number_of_repetitions = 24  # Number of times to repeat the script. You will schedule this script as daily on pythonanywhere(hourly run nota vailable for free version).
+
+#With this your script will run daily but also 24 times every hour(until the resources limit is not reached).
 
 run_script_with_delay(your_script, delay_in_seconds, number_of_repetitions)
